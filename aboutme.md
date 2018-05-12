@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Intent and purpose
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Chris and this is website is an attempt to document my activity during my PhD so that I can keep track my progress (or lack thereof).
+> Only what gets measured gets done.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I will delve into subjects of (theoretical) science and mathematics such as
+- logic - DL (description logics) in particular
+- OWL (Web Ontology Language)
+- knowledge representation formalisms 
+- patterns of all kinds
+- functional programming
+- vim
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I am new to the game of knowledge representation and the whole ecosystem revolving around DL and OWL. A lot of things don't make sense to me yet. Feel free to laugh at my pain while you see me struggle!
