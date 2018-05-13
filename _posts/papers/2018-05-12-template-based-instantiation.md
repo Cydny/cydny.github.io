@@ -3,7 +3,6 @@ layout: post
 title: Template-Based Content ODP Instantiation
 subtitle: Weekly paper discussion
 categories: papers
-image: /img/hello_world.jpeg
 tags: [paper, DL, ODP, pattern, CODP, template]
 ---
 
