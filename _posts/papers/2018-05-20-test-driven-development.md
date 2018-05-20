@@ -15,7 +15,7 @@ The paper [^fn1] introduces the idea of test-driven development from software en
 2. Given: axiom \\(x\\) of type \\(X\\) to be added to the ontology
 3. check the vocabulary elements of \\(x\\) are in ontology \\(O\\)
 4. run TDD test twice:
-    1. the first execution should fail (check \\(O \not\models x\\)
+    1. the first execution should fail (check \\(O \not\models x\\))
     2. update the ontology (add \\(x\\))
     3. run the test again which then should pass (check that \\(O \models x\\)) and such that there is no new inconsistency or undesirable deduction
 5. Run all previous successful tests, which still have to pass (i.e., regression testing)
@@ -24,15 +24,15 @@ The authors claim that this approach to ontology engineering deepens the underst
 
 # TDD Specification
 
-The authors specify 36 generic tests that cover most of OWL 2 DL language features. For example, let \\( \alpha \\) be a class subsumption axiom of the form \\( C \sqsubseteq D\\). In order to test, whether \((\alpha\\) is asserted or entailed by an ontology one can perform a TBox test or an ABox test:
+The authors specify 36 generic tests that cover most of OWL 2 DL language features. For example, let \\( \alpha \\) be a class subsumption axiom of the form \\( C \sqsubseteq D\\). In order to test, whether \\(\alpha\\) is asserted or entailed by an ontology one can perform a TBox test or an ABox test:
 
 - **TBox test**:
-    * Query for all subclasses of \\(D\\).
-    * If \\( C \\) is not contained in the output of the query, then the test fails.
+    * Query for all subclasses of \\(D\\)
+    * If \\( C \\) is not contained in the output of the query, then the test fails
 - **ABox test**:
-    * Create a mock object \\(a\\) and assert \\(C(a)\\). 
-    * Query for all elements in \\(D\\).
-    * If \\(a\\) is not contained in the output if the query, then the test fails.
+    * Create a mock object \\(a\\) and assert \\(C(a)\\)
+    * Query for all elements in \\(D\\)
+    * If \\(a\\) is not contained in the output if the query, then the test fails
 
 An experimental evaluation of TBox and ABox based TDD tests showed that TBox test are generally faster than the corresponding ABox tests. The performance difference is larger with respect to larger ontologies.
 
