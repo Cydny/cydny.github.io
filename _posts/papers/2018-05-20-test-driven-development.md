@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test-Driven Development of ontologies
+title: Test-Driven Development of Ontologies
 subtitle: Weekly paper discussion
 categories: papers
 mathjax: true
