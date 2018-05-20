@@ -4,7 +4,7 @@ title: Test-Driven Development of ontologies
 subtitle: Weekly paper discussion
 categories: papers
 mathjax: true
-tags: [paper, DL, ODP, pattern, CODP, template]
+tags: [paper, DL, debugging, ontology engineering, test driven development]
 ---
 
 # Summary
