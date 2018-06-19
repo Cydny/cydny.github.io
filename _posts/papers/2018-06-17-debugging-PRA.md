@@ -25,17 +25,17 @@ In order to detect missing "is-a" relationships in an ontology the authors propo
 This approach of detecting missing "is-a" relationship is generalised to work on a _network of ontologies_ in which all ontologies are pairwise interlinked by respective PRAs. The possibility of transitive detection mechanisms is not addressed. For example, consider three ontologies
 
 $$\begin{align*}
-O = \{A, B\}\\
-O' = \{A', B'\}\\
-O'' \{A'', B'', A'' \sqsubseteq B''
+O &= \{A, B\}\\
+O' &= \{A', B'\}\\
+O'' &= \{A'', B'', A'' \sqsubseteq B''\}
 \end{align*}$$
 
 and the following mappings
 
 $$\begin{align*}
-m: O \rightarrow O', A \mapsto A', B \mapsto B'\\
-m': O \rightarrow O'', \emptyset\\
-m'': O' \mapsto O'', A' \mapsto A'', B' \mapsto B''.
+m &: O \rightarrow O', A \mapsto A', B \mapsto B'\\
+m' &:  O \rightarrow O'', \emptyset\\
+m'' &: O' \mapsto O'', A' \mapsto A'', B' \mapsto B''.
 \end{align*}$$
 
 Then, the proposed approach will detect a missing "is-a" relation for ontology \\( O'\\), but no missing "is-a" relations for ontology \\( O \\). However, the detection mechanism could be called again after the missing "is-a" relation in ontology \\(O'\\) is repaired, in which case it will detect now a missing relationship for ontology \\(O\\) as well.
