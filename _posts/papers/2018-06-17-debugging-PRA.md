@@ -24,22 +24,16 @@ In order to detect missing "is-a" relationships in an ontology the authors propo
 
 This approach of detecting missing "is-a" relationship is generalised to work on a _network of ontologies_ in which all ontologies are pairwise interlinked by respective PRAs. The possibility of transitive detection mechanisms is not addressed. For example, consider three ontologies
 
-\\[
-\begin{align*}
-O = \{A, B\}\\
+$$O = \{A, B\}\\
 O' = \{A', B'\}\\
-O'' \{A'', B'', A'' \sqsubseteq B''
-\end{align*}
-\\]
+O'' \{A'', B'', A'' \sqsubseteq B''$$
 
 and the following mappings
 
 \\[
-\begin{align*}
-m: O \rightarrow O', A \mapsto A', B \mapsto B'\\
-m': O \rightarrow O'', \emptyset\\
+m: O \rightarrow O', A \mapsto A', B \mapsto B'
+m': O \rightarrow O'', \emptyset
 m'': O' \mapsto O'', A' \mapsto A'', B' \mapsto B''.
-\end{align*}
 \\]
 
 Then, the proposed approach will detect a missing "is-a" relation for ontology \\( O'\\), but no missing "is-a" relations for ontology \\( O \\). However, the detection mechanism could be called again after the missing "is-a" relation in ontology \\(O'\\) is repaired, in which case it will detect now a missing relationship for ontology \\(O\\) as well.
@@ -52,7 +46,7 @@ A _structural repair_ for an ontology with missing "is-a" relationships is defin
 2. More information is preferred: Given two potential repair actions \\( x \text{ is-a } y \\) and \\(x' \text{ is-a } y'\\) for an ontology \\( O\\), then \\(x \text{ is-a } y \\) is preferred if \\(O \models x' \text{ \text{ is-a } } x \land y \text{ \text{ is-a } } y'\\)
 3. Equivalences are to be avoided: Given two potential repair actions, such that one introduces an equivalence relationship whereas the other does not, then the later is preferred.
 
-The first preference relation is intuitively comprehensible. The third preference relation is justified by the argument that equivalence relationships represent a strong assumption about the domain from a modelling perspective and should be treated with caution. The second preference relation is easily understandable by a mathematical reasoning: if \\(O \models x' \text{ is-a } x \land y \text{ is-a } y'\\) holds, then \\(x \text{ is-a } y \\) is _more informative_ than \\(x' \text{ is-a } y'\\) because we can derive \\(x' \text{ is-a } y' \\) once we have used \\(x \text{ is-a } y\\) to repair the missing relationship. Intuitively, If we need to repair a missing relationship \(( a \text{ is-a } b\\), then relating a superclass of \\(a\)) with subclass of \\(b\\) will fix the missing relationship indirectly by providing more specific information.
+The first preference relation is intuitively comprehensible. The third preference relation is justified by the argument that equivalence relationships represent a strong assumption about the domain from a modelling perspective and should be treated with caution. The second preference relation is easily understandable by a mathematical reasoning: if \\(O \models x' \text{ is-a } x \land y \text{ is-a } y'\\) holds, then \\(x \text{ is-a } y \\) is _more informative_ than \\(x' \text{ is-a } y'\\) because we can derive \\(x' \text{ is-a } y' \\) once we have used \\(x \text{ is-a } y\\) to repair the missing relationship. Intuitively, If we need to repair a missing relationship \\( a \text{ is-a } b\\), then relating a superclass of \\(a\\) with subclass of \\(b\\) will fix the missing relationship indirectly by providing more specific information.
 
 
 # Experimental results
