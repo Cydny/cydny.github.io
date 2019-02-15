@@ -1,0 +1,8 @@
+---
+layout: page
+title: Logic
+---
+
+{% for post in site.categories.logic %}
+ <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
